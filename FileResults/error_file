@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "script.py", line 2, in <module>
+    print(lla)
+NameError: name 'lla' is not defined
