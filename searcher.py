@@ -14,23 +14,16 @@ while True:
         print("Please enter a valid file name ")
 
 
-def extract_error():
+def sites_info(error_statement = None):
     fileHandle = open( './FileResults/error_file',"r" )
     lineList = fileHandle.readlines()
     fileHandle.close()
-    # print(lineList[-1])
-    if lineList == []:
-        return 0
-    return lineList[-1]
-    
+    error_statement = lineList[-1]
+#     if error_statement:
+    j = search(error_statement, tld="com", num=10, stop=5, pause=2)
+    print(x for x in j)
+#     else:
+    print('Your program is running fine!')
+#         exit
 
-def sites_info(error_statement):
-    
-    if error_statement:
-        j = search(error_statement, tld="com", num=10, stop=5, pause=2)
-        print(x for x in j)
-    else:
-        print('Your program is running fine!')
-        exit
-
-sites_info(extract_error())
+sites_info()
