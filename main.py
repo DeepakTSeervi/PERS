@@ -1,25 +1,32 @@
 import os
 import re
 import nltk
-from termcolor import colored
-from nltk.corpus import stopwords
-
 # trying to import few modules
 # if not found, then they are installed using pip
+
+try:
+    from termcolor import colored
+except:
+    os.system('pip3 install termcolor')
+try:
+    from nltk.corpus import stopwords
+except:
+    os.system('pip3 install nltk')
+
 try:
     import requests
 except:
-    os.system('pip install requests')
+    os.system('pip3 install requests')
 
 try:
     from bs4 import BeautifulSoup
 except:
-    os.system('pip install bs4')
+    os.system('pip3 install bs4')
 
 try:
     from googlesearch import search
 except:
-    os.system('pip install google')
+    os.system('pip3 install google')
 
 
 def scrap_stackoverflow_question(url):
